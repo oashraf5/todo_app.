@@ -1,0 +1,91 @@
+  <head>
+    <title>Managing Time 101</title>
+
+   <link rel="stylesheet" type="text/css" href="theme.css">
+
+  </head>
+
+  <body>
+    <a class="button">Add Problem</a>
+    <h1 class="titleclass">Open To-dos</h1>
+
+    <ul id="myList">
+       
+        <li class="firstpair">Make the curriculum</li>
+        <li class="firstpair">Buy workshop supplies</li>
+        <li class="secondpair">Order food for Saturday and Sunday</li>
+        <li class="secondpair">Check pre-work assignments</li>
+        <li class="thirdpair">Send workshop location to all the students</li>
+        <li class="thirdpair">Add a new to-do</li>
+    
+    </ul>
+
+    <a href="/new_todo.html">Add a new to-do</a> 
+
+<form>
+<textarea id="inputform" name="Text1"></textarea>
+</form>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+    function myFunction() {
+        var node = document.createElement("li");
+        node.setAttribute("class", "thirdpair");
+        var theValue = document.getElementById("inputform").value
+        var textnode = document.createTextNode(theValue);
+        node.appendChild(textnode);
+        document.getElementById("myList").appendChild(node);
+        
+    }
+</script>
+
+<style>
+    h1 {
+    color: orange;
+}
+
+.titleclass {
+    color: black;
+}
+
+.firstpair {
+    color: orange;
+}
+
+.secondpair {
+    color: blue;
+}
+
+.thirdpair {
+    color: black;
+}
+
+body{
+background-color: rgb(130, 27, 30); 
+
+}
+
+.button {display: block;
+width: 115px;
+margin-left: 1005px ;
+margin-right: 0px ;
+height: 25px;
+background: #4E9CAF;
+padding: 10px;
+position: absolute;
+bottom: 550px;
+text-align: center;
+border-radius: 5px;
+color: white;
+font-weight: bold; 
+    
+}
+
+textarea {height: 100px;
+width: 300px;
+background-color: rgb(66, 134, 244)
+    
+}
+</style>
+  </body>
