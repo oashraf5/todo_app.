@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'list/index'
 
+  get 'list/index'
+
 get 'list/index'
 
 root 'application#hello'
