@@ -45,4 +45,4 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: todo_app_prodcution
+  database: todo_app_production
