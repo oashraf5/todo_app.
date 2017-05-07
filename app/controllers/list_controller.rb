@@ -26,4 +26,15 @@ class ListController < ApplicationController
     l.save
     redirect_to "/list/#{ l.id }"
   end
+  
+  def edit
+    @list = List.find_by_id(params['id'])
+  end
+  
+  def update
+    l=List.find_by_id(params['id'])
+    l.name=params['name']
+    l.save
+    redirect_to "/list/#{l.id}"
+  end
 end

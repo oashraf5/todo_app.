@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'application/new_todo'
   get 'list/new' => 'list#new'
   get 'list/create' => 'list#create'
+  get 'list/edit/:id' => 'list#edit'
+  get 'list/update/:id' => 'list#update'
   get 'list/:id' => 'list#show'
   
   root 'application#hello'
