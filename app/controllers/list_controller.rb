@@ -11,10 +11,19 @@ class ListController < ApplicationController
 
   def show
   
-  @id = params['id']
+  @list = List.find_by_id(params['id'])
     if @id.to_i> 200
       @message = "not so fast"        
     end
   end
 
+  def new
+  end
+
+  def create
+    l = List.new
+    l.name = params['name']
+    l.save
+    redirect_to "/list/#{ l.id }"
+  end
 end
