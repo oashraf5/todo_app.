@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   get 'list/index'
   get 'list/new_todo'
   get 'application/new_todo'
-  get 'list/1' => 'list#first'
-  get 'list/2' => 'list#second'
+  get 'list/:id' => 'list#show'
   
   root 'application#hello'
   # The priority is based upon order of creation: first created -> highest priority.

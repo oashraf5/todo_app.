@@ -9,10 +9,12 @@ class ListController < ApplicationController
     @num_todos = @mytodos.length
   end
 
-  def first 
+  def show
+  
+  @id = params['id']
+    if @id.to_i> 200
+      @message = "not so fast"        
+    end
   end
 
-  def second 
-  end 
 end
-
